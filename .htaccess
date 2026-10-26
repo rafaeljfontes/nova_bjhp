@@ -1,0 +1,15 @@
+DirectoryIndex bjhp.php
+Options -Indexes
+
+RewriteEngine On
+
+# Mantém compatibilidade com a URL publicada na página da Edição Especial.
+RewriteRule ^BJHP-EdicaoEspecial2026_desktop_1920\.png$ img/BJHP-EdicaoEspecial2026_desktop_1920.png [L]
+
+# Rotas públicas sem a extensão .php
+RewriteRule ^edicao-atual/?$ pages/edicao_atual.php [L,QSA]
+RewriteRule ^edicoes/?$ pages/todas_edicoes.php [L,QSA]
+RewriteRule ^edicao/?$ pages/issue.php [L,QSA]
+RewriteRule ^artigo/?$ pages/view_artigo.php [L,QSA]
+RewriteRule ^api/?$ pages/api.php [L,QSA]
+RewriteRule ^teste-artigos/?$ pages/teste_artigos.php [L,QSA]
